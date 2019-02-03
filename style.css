@@ -1,0 +1,2192 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-family: 'Saira', sans-serif;
+}
+
+h2 {
+    color: white;
+}
+
+/*PARALLAX====================================================*/
+.parallax {
+    background-image: url(bilder/bg8.jpg);
+    height:100vh;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+/*PARALLAX====================================================*/
+
+
+
+
+
+/*SEARCHBAR====================================================*/
+.container {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px 10% 0 0;
+    z-index: 99999;
+    display: none;
+}
+
+.searchbar {
+    font-size: 10px;
+    width: 20px;
+    height: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    transition: all .2s;
+    transition-delay: .1s;
+}
+
+.container img {
+    width: 20px;
+    position: absolute;
+    top: 4px;
+    left: 185px;
+    cursor: pointer;
+}
+
+.searchbar::placeholder {
+    opacity: .5;
+}
+
+/*SEARCHBAR====================================================*/
+
+
+/*NAVIGATION=========================================*/
+.navbarN {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    display: none;
+}
+
+.navbarN ul {
+    display: flex;
+    margin: 25px 0 0 0;
+    height: 30px;
+
+}
+
+.navbarN ul li {
+    font-family: 'Saira', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin: 0 10px 0px 10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-transform: uppercase;
+    transition: 0.1s;
+    border-bottom: 1px solid transparent;
+}
+
+.navbarN ul li a {
+    padding-bottom: 2px;
+    color:white;
+
+}
+
+.navbarN ul li:hover {
+    border-bottom: 1px solid white;
+    transform: scale(1.1);
+}
+
+
+/*NAVIGATION=========================================*/
+
+
+
+
+/*NAVIGATION==RESPONSIVE=======================================*/
+#nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: block;
+    /*background-color: #000;*/
+    background-image: linear-gradient(#212121, #111111, #000);
+    border-bottom: 0.5px solid #333;
+    z-index: 999;
+}
+
+#nav img {
+    width: 20px;
+}
+
+#navR a {
+    position: absolute;
+    top: 0;
+    background-image: url(bilder/LogoNur300x200.png);
+    background-size: 43px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 5%;
+    z-index: 99999;
+    display: block;
+    animation: 0.6s navR infinite alternate;
+    transform: rotate(-10deg);
+}
+
+nav a {
+    position: absolute;
+    top: 0;
+    background-image: url(bilder/Logo300x200.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 60px;
+    margin: 10px 0 0 5%;
+    z-index: 99999;
+    display: none;
+}
+
+#hamburgerDisplay {
+    display: block;
+}
+
+#hamburger-button {
+    position: absolute;
+    z-index: 9999;
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    right: 0;
+    height: 70px;
+    line-height: auto;
+    width: 20px;
+    margin-right: 8%;
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 7px 7px 7px 7px;
+    grid-template-rows: 7px 7px 7px 7px;
+
+}
+
+#hamburger-button:hover {
+    cursor: pointer;
+}
+
+#hamburger-button > span {
+    display: block;
+    height: 5px;
+    margin-bottom: 4px;
+    width: 5px;
+    background-color: #FF6600;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    transition-duration: 0.4s;
+}
+
+
+#hamburger-button.open > span:first-child {
+    transform: translateY(11px) rotate(45deg);
+    width: 30px;
+}
+
+#hamburger-button.open > span:nth-child(2) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:nth-child(3) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:nth-child(4) {
+    transform: rotateY(-90deg);
+}
+
+#hamburger-button.open > span:nth-child(5) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:nth-child(6) {
+    transform: rotateY(-90deg);
+}
+
+#hamburger-button.open > span:nth-child(7) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:nth-child(8) {
+    transform: rotateY(-90deg);
+}
+
+#hamburger-button.open > span:nth-child(9) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:nth-child(10) {
+    transform: rotateY(-90deg);
+}
+
+#hamburger-button.open > span:nth-child(11) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:nth-child(12) {
+    transform: rotateY(-90deg);
+}
+
+#hamburger-button.open > span:nth-child(13) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:nth-child(14) {
+    transform: rotateY(-90deg);
+}
+
+#hamburger-button.open > span:nth-child(15) {
+    transform: rotateY(90deg);
+}
+
+#hamburger-button.open > span:last-child {
+    transform: translateY(-10px) translateX(-21px) rotate(135deg);
+    width: 30px;
+}
+
+
+#hamburger-button > span:nth-child(6) {
+    background-color: #fff;
+}
+
+#hamburger-button > span:nth-child(7) {
+    background-color: #fff;
+}
+
+#hamburger-button > span:nth-child(11) {
+    background-color: #fff;
+}
+
+#hamburger-button > span:nth-child(10) {
+    background-color: #fff;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    height: 400px;
+    width: 100%;
+    left: -100%;
+    transition: 1s;
+    background-color: #000;
+    color: white;
+    border-right: 0.5px solid #1c110b;
+}
+
+.navbar.open {
+    left: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin-top: 125px;
+    margin-bottom: 125px;
+    font-size: 25px;
+    position: relative;
+
+
+}
+
+.navbar ul li {
+    margin: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 0.5px solid #111;
+    border-bottom: 0.5px solid #111;
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+    font-family: 'Saira', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.8s;
+}
+
+
+.navbar ul li:nth-child(2) {
+    border-top: 0;
+    animation: works 0.4s infinite alternate;
+}
+
+.navbar ul li:last-child {
+    border-top: 0;
+}
+
+.navbar ul li:hover {
+    cursor: pointer;
+    border-left: 20px solid #ff6600;
+    transition: 0.8s;
+}
+
+@keyframes works {
+    0% {
+        border-left: 15px solid #CC0000;
+    }
+
+    100% {
+        border-left: 20px solid #ff6600;
+    }
+}
+
+/*NAVIGATION==RESPONSIVE=======================================*/
+
+/*HEADER====================================================*/
+header h1 {
+    position: absolute;
+    top: 120px;
+    left: 10%;
+    color: white;
+    font-size: 4em;
+    font-family: 'Saira', sans-serif;
+    letter-spacing: 25px;
+}
+
+/*HEADER====================================================*/
+
+/*ICONS NORMAL==============================================*/
+.icons2 {
+    position: fixed;
+    top: 300px;
+    right: 0px;
+    width: 50px;
+    height: 100px;
+    z-index: 999999;
+    display:none;
+
+}
+
+.facebook2 {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    transition: 1s;
+    background-color: #fff;
+    padding: 3px;
+    width: 30px;
+    height:30px;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.twitter2 {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    transition: 1s;
+    background-color: #fff;
+    padding: 3px;
+    width: 30px;
+    height:30px;
+    cursor: pointer;
+}
+
+
+.youtube2 {
+    position: absolute;
+    right: 0px;
+    top: 80px;
+    transition: 1s;
+    background-color: #fff;
+    padding: 3px;
+    width: 30px;
+    height:30px;
+    cursor: pointer;
+}
+
+
+
+
+.soundcloud2 {
+    position: absolute;
+    right: 0px;
+    top: 120px;
+    transition: 1s;
+    background-color: #fff;
+    padding: 3px;
+    width: 30px;
+    height:30px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
+
+/*ICONS NORMAL==============================================*/
+/*ICONS=====================================================*/
+.icons {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    display: flex;
+    width: 200px;
+    margin: 0 0 0 90px;
+
+}
+
+.facebook {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    transition: 1s;
+}
+
+.facebook:hover {
+    animation: 2s facebook infinite alternate;
+    transition: 2s;
+}
+
+.facebook a {
+    background-image: url(/bilder/facebookW.svg);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    transition: 1.5s;
+    transform: rotateY(0deg);
+}
+
+
+.twitter {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 50px;
+    transition: 1s;
+}
+
+.twitter:hover {
+    animation: 2s twitter infinite alternate;
+    transition: 2s;
+}
+
+.twitter a {
+    background-image: url(/bilder/twitterW.svg);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    transition: 1.5s;
+}
+
+.youtube {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 100px;
+    transition: 1s;
+}
+
+.youtube:hover {
+    animation: 2s youtube infinite alternate;
+    transition: 2s;
+}
+
+.youtube a {
+    background-image: url(/bilder/youtubeWR.svg);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    transition: 1.5s;
+}
+
+
+.soundcloud {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 150px;
+    transition: 1s;
+}
+
+.soundcloud:hover {
+    animation: 2s soundcloud infinite alternate;
+    transition: 2s;
+}
+
+.soundcloud a {
+    background-image: url(/bilder/soundcloudW.svg);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    transition: 1.5s;
+}
+
+
+
+/*ICONS=====================================================*/
+
+
+
+
+
+/*NAVIGATIN=================================================*/
+content {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: ;
+}
+
+#home {
+    background-color: #222;
+    height: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+#about {
+    background-image: linear-gradient(#222, #333);
+    height: 900px;
+    width: 100%;
+    margin: auto;
+}
+
+.about h1 {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 120px;
+    left: 5%;
+    font-family: 'Saira', sans-serif;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid #333;
+}
+
+.about article {
+    margin: auto;
+    padding: 50px 0 0 0;
+    width: 250px;
+}
+
+.about article h2 {
+    color: #fff;
+    text-align: center;
+    margin 20px 0px;
+    font-family: 'Saira', sans-serif;
+}
+
+.about article p {
+    color: #fff;
+    font-family: 'Saira', sans-serif;
+    text-align: center;
+    line-height: 1.4;
+    padding-bottom: 50px;
+    border-bottom: 0.5px solid #333;
+
+}
+
+#pictureContainer {
+    width: 250px;
+    margin: auto;
+    padding-top: 200px;
+    padding-bottom: 40px;
+    border-bottom: 0.5px solid #333;
+}
+
+#picture {
+    width: 250px;
+    height: 250px;
+    background-image: url(/bilder/p1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 200px;
+    border: 1px solid #333;
+}
+
+/*SKILLS===========================*/
+#skillcontainer {
+    margin: 50px auto 0 auto;
+    font-family: 'Saira', sans-serif;
+    width: 94%;
+}
+h5{
+    color:#fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.skillcontainer {
+    height: 5px;
+    background-color: #555;
+    margin: 25px 0px;
+    border-radius: 10px;
+}
+
+.paint {
+    background-color: #ff6600;
+    height: 5px;
+    width: 93%;
+    border-radius: 10px;
+}
+
+.paint2 {
+    background-color: #ff6600;
+    height: 5px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.paint3 {
+    background-color: #ff6600;
+    height: 5px;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.paint4 {
+    background-color: #ff6600;
+    height: 5px;
+    width: 85%;
+    border-radius: 10px;
+}
+
+.skillcontainer p {
+    padding: 10px 0 0 0;
+}
+
+.sounddesign {
+    color: #fff;
+    font-size: 12px;
+}
+
+.songwriting {
+    color: #fff;
+    font-size: 12px;
+}
+
+.mixing1 {
+    color: #fff;
+    font-size: 12px;
+}
+
+.organization {
+    color: #fff;
+    font-size: 12px;
+}
+
+span {
+    float: right;
+}
+
+/*SKILLS===========================*/
+
+/*=================================*/
+#works {
+    background-image: linear-gradient(#333, #333);
+    height: 1070px;
+    width: 100%;
+    margin: auto;
+}
+
+.works {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin: auto;
+}
+#works #h1{
+    width: 100%;
+}
+#works h1 {
+    margin: auto;
+    width: 98%;
+    padding: 10px 0 10px 0px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.scContainer {
+    position: relative;
+    top: -305px;
+    width: 98%;
+    height: 100px;
+    border-top: 1px solid #555;
+    margin: auto;
+}
+
+.like {
+    position: absolute;
+    bottom: 40px;
+    right: 88px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/like.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.like:hover {
+    background-image: url(tracks/likeHover2.png);
+    transition: 0.5s;
+}
+
+/*PLAY/STOP1*/
+#picture0 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/one.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#share img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+}
+
+/*PLAY/STOP2*/
+#picture2 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/two.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound2 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound2 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title2 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title2 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download2 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share2 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP3*/
+#picture3 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/three.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound3 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound3 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title3 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title3 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download3 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share3 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP4*/
+#picture4 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/four.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound4 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound4 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title4 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title4 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download4 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share4 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP5*/
+#picture5 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/five.jpeg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound5 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound5 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title5 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title5 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download5 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share5 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP6*/
+#picture6 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/six.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound6 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound6 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title6 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title6 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download6 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share6 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP7*/
+#picture7 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/seven.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound7 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound7 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title7 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title7 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download7 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share7 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP8*/
+#picture8 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/eight.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound8 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound8 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title8 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title8 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download8 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share8 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP9*/
+#picture9 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/nine.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound9 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound9 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title9 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title9 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download9 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share9 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*PLAY/STOP10*/
+#picture10 {
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url(tracks/ten.jpg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#playSound10 {
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/playW.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#stopSound10 {
+    position: absolute;
+    top: 31px;
+    left: 45px;
+    width: 20px;
+    height: 20px;
+    background-image: url(tracks/pause.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#title10 h2 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Saira', sans-serif;
+}
+
+#title10 h3 {
+    position: absolute;
+    padding: 0;
+    left: 100px;
+    top: 55px;
+    padding: 7px 0 0 0;
+    font-size: 10px;
+    color: #bcbabe;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    border-top: 0.5px dotted #555;
+}
+
+#download10 img {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#share10 img {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/*=================================*/
+#contact {
+    /*background-color: #222;*/
+    background-image: linear-gradient(#333, #222);
+    height: 900px;
+    width: 100%;
+    margin: auto;
+}
+
+.contact {
+    width: 350px;
+    padding: 150px 0 0 0;
+    margin: auto;
+}
+
+.contact h1 {
+    width: 150px;
+    color: #fff;
+    font-family: 'Saira', sans-serif;
+    font-size: 25px;
+    border-bottom: 0.5px solid #555;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+#contact article {
+    margin-left: 60px;
+    display: none;
+    border-left: 0.5px solid #616161;
+}
+
+form {}
+
+form h2 {
+    font-size: 13px;
+    width: 100px;
+    margin: -16px 0 0 55px;
+    font-family: 'Saira', sans-serif;
+    color: #777;
+    font-weight: 100;
+}
+
+
+input {
+    width: 340px;
+    font-size: 100%;
+    color: white;
+}
+
+textarea {
+    font-size: 100%;
+    color:white;
+}
+
+input[placeholder] {
+    font-size: 80%;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
+textarea[placeholder] {
+    font-size: 80%;
+    font-family: 'Saira', sans-serif;
+}
+
+input[type=text] {
+    padding: 5px;
+    margin: 50px 0 0 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 0.5px solid #fff;
+    color: white;
+
+}
+
+input[type=email] {
+    padding: 5px;
+    margin: 0 0 0 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 0.5px solid #fff;
+}
+
+input[type=checkbox] {
+    width: 5px;
+    padding: 5px;
+    margin: 0 0 0 0;
+    font-size: 10px;
+}
+
+textarea {
+    padding: 5px;
+    margin: 0 0 0 0;
+    border: 0.5px solid #fff;
+    border-radius: 0 5px 5px 5px;
+    outline: none;
+    width: 340px;
+    background-color: transparent;
+}
+
+select {
+    padding: 3px;
+    margin: 0 0 0 0;
+    border: 0.5px solid #fff;
+    border-radius: 0 5px 5px 5px;
+    font-family: 'Saira', sans-serif;
+    outline: none;
+    background-color: transparent;
+    color: #777;
+}
+
+
+option {}
+
+input[type=submit] {
+    padding: 5px;
+    margin: 0 0 0 0;
+    width: 100px;
+    font-size: 12px;
+    border: 0.5px solid #fff;
+    border-radius: 0 5px 5px 5px;
+    font-family: 'Saira', sans-serif;
+    outline: none;
+    background-color: transparent;
+    color:#777;
+}
+
+input[type=submit]:hover {
+    background-color: #222;
+    color: white;
+    border: 0.5px solid #555;
+}
+
+
+input[type=checkbox]{
+    width: 50px;
+    margin-left:-18px;
+}
+#whiteDesign{
+    display:flex;
+}
+#whiteDesign img{
+    position: absolute;
+    bottom:10px;
+    left:5px;
+    width: 20px;
+    height: 20px;
+    display:block;
+}
+
+#whiteDesign h6{
+    position: absolute;
+    bottom:15px;
+    left:35px;
+    color:#aaa;
+    font-size: 10px;
+    font-family: 'Saira', sans-serif;
+    display:block;
+    
+}
+
+/*NAVIGATIN=================================================*/
+
+
+
+
+
+/*BACK TO TOP BUTTON=========================================*/
+/*.back-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 100px;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    color: #000;
+    background: #000;
+    border: 5px solid transparent;
+    animation: 0.6s jump infinite alternate;
+    transition: all 0.5s ease;
+    z-index: 9999;
+}*/
+.back-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    padding: ;
+    margin: 15px 0 30px 0;
+    z-index: 9999;
+    background-color: transparent;
+
+}
+
+#back {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+
+#back h1 {
+    font-size: 43px;
+    color: #bbb;
+    font-weight: 100;
+}
+
+#back h2 {
+    margin-top: -2px;
+    margin-left:-px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #bbb;
+    font-family: 'Saira', sans-serif;
+    letter-spacing: 4px;
+}
+
+@-webkit-keyframes span1 {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(40deg);
+
+    }
+}
+
+
+/*BACK TO TOP BUTTON=========================================*/
+
+
+
+
+
+/*KEYFRAMES*/
+@keyframes jump {
+    to {
+        //bottom: 5px;
+        border-right: 19px solid #fdff00;
+        border-top: 20px solid #fdff00;
+        border-left: 20px solid #fdff00;
+        border-bottom: 20px solid #fdff00;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        //transform: rotate(-90deg);
+    }
+}
+
+@keyframes jumpEye {
+    to {}
+}
+
+/*ICONS==============*/
+@keyframes facebook {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(-180deg);
+
+    }
+
+    50% {
+        transform: rotateY(-360deg);
+    }
+
+    75% {
+        transform: rotateY(-180deg);
+
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes twitter {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(180deg);
+
+    }
+
+
+    50% {
+        transform: rotateY(360deg);
+
+    }
+
+    75% {
+        transform: rotateY(180deg);
+
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+
+@keyframes youtube {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(-180deg);
+
+    }
+
+    50% {
+        transform: rotateY(-360deg);
+
+    }
+
+    75% {
+        transform: rotateY(-180deg);
+
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes soundcloud {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(180deg);
+
+    }
+
+
+    50% {
+        transform: rotateY(360deg);
+
+    }
+
+    75% {
+        transform: rotateY(180deg);
+
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes navR {
+    0% {
+        transform: rotateY(0deg)
+    }
+
+    100% {
+        transform: rotateY(360deg)
+    }
+}
+
+/*ICONS==============*/
+/*KEYFRAMES*/
+
+
+
+
+
+/*@MEDIA*/
+@media screen and (min-width:320px) and (max-width:479px) {
+    content {
+        top: 0px;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:767px) {
+    content {
+        top: 0px;
+    }
+
+    input {
+        width: 390px;
+        font-size: 100%;
+    }
+
+    textarea {
+        width: 390px;
+        font-size: 100%;
+    }
+    
+    #works h1 {
+        width: 93%;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-height:1023px) {
+    #hamburgerDisplay {
+        display: none;
+    }
+
+    .container {
+        display: block;
+    }
+
+    content {
+        top: 300px;
+        transition: 2s;
+    }
+
+    .parallax {
+        display: block;
+
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #navR a {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .navbarN {
+        display: block;
+    }
+
+    #about {
+        border-top: 0.5px solid #555;
+    }
+
+    #skillcontainer {
+        width: 60%;
+    }
+
+    #about {
+        height: 970px;
+    }
+
+    .about h1 {
+        left: 20%;
+    }
+
+    .scContainer {
+        position: relative;
+        top: -305px;
+        width: 88%;
+        height: 100px;
+        border-top: 1px solid #555;
+        margin: auto;
+    }
+
+    .contact {
+        padding: 150px 0 0 0;
+        width: 40%;
+        margin-left: 175px;
+    }
+    .icons2 {
+    display:block;
+
+}
+    #whiteDesign{
+    display:flex;
+}
+#whiteDesign img{
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    width: 30px;
+    height: 30px;
+    display:block;
+}
+
+#whiteDesign h6{
+    position: absolute;
+    bottom:20px;
+    left:50px;
+    color:#aaa;
+    font-size: 10px;
+    font-family: 'Saira', sans-serif;
+    display:block;
+    
+}
+    
+       #works h1 {
+        width: 85%;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    #contactContainer {
+        display: flex;
+    }
+
+    .contact {
+        padding: 0px 0 0 0;
+        margin-right: 50px;
+        width: 400px;
+        margin-left: 65px;
+    }
+
+    form {
+        width: 150px;
+    }
+
+    #contact article {
+        margin: 110px 0 0 0px;
+        display: block;
+        border-left: 0.5px solid #616161;
+        font-family: 'Saira', sans-serif;
+        height: 560px;
+    }
+
+    #contact article h1 {
+        width: 130px;
+        color: #fff;
+        letter-spacing: 2px;
+        margin: 0px 0 0px 30px;
+        padding: 0 0 10px 0;
+        font-size: 25px;
+        text-transform: uppercase;
+        border-bottom: 0.5px solid #555;
+    }
+    #contact article h2 {
+        width: 430px;
+        color: #fff;
+        letter-spacing: 2px;
+        margin: 0px 0 0px 30px;
+        padding: 0 0 0px 0;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    #contact article p {
+        color: #fff;
+        font-size: 15px;
+        width: 410px;
+        text-align: left;
+        padding: 0px 0 0px 30px;
+        border: none;
+        line-height: 1.4;
+    }
+
+    #articlePicture {
+        display: flex;
+    }
+
+    .about h1 {
+        color: #706f72;
+        font-size: 30px;
+        position: absolute;
+        top: 120px;
+        left: 200px;
+        font-family: 'Saira', sans-serif;
+        letter-spacing: 2px;
+        padding-bottom: 20px;
+        border-bottom: 0.5px solid #333;
+    }
+
+    .about #articlePicture article {
+        margin: 100px 250px 0 0px;
+        padding: 200px 0 50px 0;
+        width: 230px;
+        display: block;
+    }
+
+    .about article h2 {
+        color: #fff;
+        text-align: center;
+        margin 20px 0px;
+        font-family: 'Saira', sans-serif;
+        font-size: 20px;
+        width: 300px;
+    }
+
+    .about article p {
+        width: 300px;
+        color: #fff;
+        font-family: 'Saira', sans-serif;
+        text-align: center;
+        line-height: 1.4;
+        padding-top: 0px;
+        padding-bottom: 246px;
+        border-bottom: 0.5px solid #333;
+
+    }
+
+    #pictureContainer {
+        width: 350px;
+        margin-left: 180px;
+        padding-top: 200px;
+        padding-bottom: 40px;
+        border-bottom: 0.5px solid #333;
+    }
+
+    #picture {
+        width: 350px;
+        height: 350px;
+        background-image: url(/bilder/p1.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 200px;
+        border: 1px solid #333;
+    }
+
+    #skillcontainer {
+        margin: 50px auto 0 auto;
+        font-family: 'Saira', sans-serif;
+        width: 65%;
+    }
+
+    header h1 {
+        position: absolute;
+        top: 120px;
+        left: 19%;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width:1920px) {
+    header h1 {
+        margin: 20px auto 0 150px;
+    }
+
+    .about {
+        width: 1024px;
+        margin: auto;
+    }
+
+    .about h1 {
+        color: #fff;
+        font-size: 30px;
+        position: absolute;
+        top: 120px;
+        left: 28%;
+        font-family: 'Saira', sans-serif;
+        letter-spacing: 2px;
+        padding-bottom: 20px;
+        border-bottom: 0.5px solid #333;
+    }
+
+    .works {
+        width: 1024px;
+    }
+
+       #works h1 {
+        width: 45%;
+    }
+
+
+    .contact {
+        width: 350px;
+        padding: 110px 0 0 0;
+    }
+
+    .contact h1 {
+        width: 150px;
+        padding: 0px 0 10px 0;
+    }
+
+    #contact article {
+        margin: 110px 0 0 35px;
+        padding: 0 0 0 35px;
+        display: block;
+        border-left: 0.5px solid #616161;
+        font-family: 'Saira', sans-serif;
+        height: 560px;
+    }
+
+    #contactContainer {
+        display: flex;
+        margin: auto;
+        width: 1024px;
+    }
+
+    .navbarN {
+        position: absolute;
+        top: 0;
+        right: 15%;
+    }
+
+    nav a {
+        margin: 10px 0 0 5%;
+    }
+}
+
+/*@MEDIA*/

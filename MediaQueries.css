@@ -1,0 +1,99 @@
+/*MIN-WIDTH 
+The following CSS will apply if the viewing area is greater than 320px.*/
+@media (min-width:320px) { 
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+
+@media (min-width:480px) { 
+    /* smartphones, Android phones, landscape iPhone */ }
+
+@media (min-width:600px) { 
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+
+@media (min-width:801px) { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+
+@media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ }
+
+@media (min-width:1281px) { 
+    /* hi-res laptops and desktops */ }
+
+/*You can combine multiple media queries. The following code will apply if the viewing area is between 600px and 900px.*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .class {
+    background: #333;
+  }
+}
+
+/*
+in practice, many designers convert pixels to ems, largely b/c ems better afford zooming. At standard zoom 1em === 16px. Multiply pixels by 1em/16px to get ems. For example, 320px === 20em.
+
+=320px/16px=20rm
+
+responsivepx.com
+viewportsizes.com/mine/
+https://stackoverflow.com/questions/46313640/iphone-x-8-8-plus-css-media-queries
+
+*/
+
+/*
+Die Breakpoints wären demzufolge:
+
+320 Pixel (iPhone Hochformat)
+480 Pixel (iPhone Querformat)
+768 Pixel (iPad Hochformat)
+1024 Pixel (iPad Querformat)
+Zusätzlich:
+
+600 Pixel (kleinere Tablets Hochformat)
+1200 Pixel (Laptop)
+1500 – 1600 Pixel (TV u. sehr große Displays)
+
+*/
+
+/*
+a) The Standard Breakpoints. Working with fluid images.
+
+
+@media all and (max-width: 1690px) { ...}
+@media all and (max-width: 1280px) { ...}
+@media all and (max-width: 980px) { ... }
+@media all and (max-width: 736px) { ... }
+@media all and (max-width: 480px) { ... }
+
+
+b) The Standard Breakpoints. But possibly this is a slightly complicated situation.
+
+@media all and (min-width:1200px){ ... }
+@media all and (min-width: 960px) and (max-width: 1199px) { ... }
+@media all and (min-width: 768px) and (max-width: 959px) { ... }
+@media all and (min-width: 480px) and (max-width: 767px){ ... }
+@media all and (max-width: 599px) { ... }
+@media all and (max-width: 479px) { ... }
+
+
+
+
+c) The Standard Bootstrap 3.x Breakpoints
+
+@media all and (max-width: 991px) { ... }
+@media all and (max-width: 768px) { ... }
+@media all and (max-width: 480px) { ... }
+
+d) The Standard Bootstrap 4.x Breakpoints
+@media all and (max-width: 1199px) { ... } 
+@media all and (max-width: 991px) { ... } 
+@media all and (max-width: 768px) { ... } 
+@media all and (max-width: 575px) { ... }
+ 
+e) The Material Design Lite (MDL) Breakpoints 
+
+@media all and (max-width: 1024px) { ... } 
+@media all and (max-width: 839px) { ... } 
+@media all and (max-width: 480px) { ... }
+
+
+f) Retina Breakpoints(@2x)
+
+@media(-webkit-min-device-pixel-ratio:1.5),(min--moz-device-pixel-ratio:1.5),(-o-min-device-pixel-ratio:3/2),(min-resolution:1.5dppx){ ... }
+*/
